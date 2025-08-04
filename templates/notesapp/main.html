@@ -34,6 +34,32 @@
             --secondary: #a1a1aa;
             --primary: #4f46e5;
         }
+        /* Quill toolbar dark theme overrides */
+        [data-theme="dark"] .ql-toolbar.ql-snow,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-label,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-item,
+        [data-theme="dark"] .ql-toolbar.ql-snow button,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-options {
+            color: #fff !important;
+            border-color: var(--secondary) !important;
+            background: var(--surface) !important;
+        }
+
+        [data-theme="dark"] .ql-toolbar.ql-snow button,
+        [data-theme="dark"] .ql-toolbar.ql-snow button svg,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-label svg,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-item svg {
+            color: #fff !important;
+            fill: #fff !important;
+            stroke: #fff !important;
+        }
+
+        [data-theme="dark"] .ql-toolbar.ql-snow button.ql-bold svg,
+        [data-theme="dark"] .ql-toolbar.ql-snow button.ql-italic svg,
+        [data-theme="dark"] .ql-toolbar.ql-snow button.ql-underline svg {
+            fill: #fff !important;
+            stroke: #fff !important;
+        }
 
         /* Theme toggle button */
         .theme-toggle {

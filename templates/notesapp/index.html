@@ -36,6 +36,33 @@
             --secondary: #a1a1aa;
             --primary: #4f46e5;
         }
+        /* Quill toolbar dark theme overrides */
+        [data-theme="dark"] .ql-toolbar.ql-snow,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-label,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-item,
+        [data-theme="dark"] .ql-toolbar.ql-snow button,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-options {
+            color: #fff !important;
+            border-color: var(--secondary) !important;
+            background: var(--surface) !important;
+        }
+
+        [data-theme="dark"] .ql-toolbar.ql-snow button,
+        [data-theme="dark"] .ql-toolbar.ql-snow button svg,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-label svg,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-item svg {
+            color: #fff !important;
+            fill: #fff !important;
+            stroke: #fff !important;
+        }
+
+        [data-theme="dark"] .ql-toolbar.ql-snow button svg *,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-label svg *,
+        [data-theme="dark"] .ql-toolbar.ql-snow .ql-picker-item svg * {
+            fill: none !important;
+            stroke: #fff !important;
+            filter: none !important;
+        }
 
         /* Theme toggle button styling */
         .theme-toggle {
@@ -392,6 +419,26 @@
 
         .footer-container .contact .info li i:hover, .footer-container .contact .info li a:hover {
             color: var(--primary);
+        }
+
+        [data-theme="dark"] #editor::before {
+            content: "Type your note here";
+            color: #fff;
+            opacity: 0.6;
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            pointer-events: none;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        [data-theme="dark"] #editor:focus::before,
+        [data-theme="dark"] #editor:not(:empty)::before {
+            content: "";
+        }
+        [data-theme="dark"] .ql-editor.ql-blank::before {
+            color: #fff !important;
+            opacity: 0.6;
         }
     </style>
 </head>
